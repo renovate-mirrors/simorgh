@@ -25,6 +25,10 @@ export const FF_NEWS_SERIF_REG = `ReithSerifNewsRegular${fontFamilyBase}`;
 export const FF_NEWS_SERIF_MDM = `ReithSerifNewsMedium${fontFamilyBase}`;
 export const FF_NEWS_SERIF_BLD = `ReithSerifNewsBold${fontFamilyBase}`;
 
+export const FF_NEWS_SERIF_MDM_ITAL = `ReithSerifNewsMediumItalic${fontFamilyBase}`;
+export const FF_NEWS_SANS_REG_ITAL = `ReithSansNewsRegularItalic${fontFamilyBase}`;
+export const FF_NEWS_SANS_BLD_ITAL = `ReithSansNewsBoldItalic${fontFamilyBase}`;
+
 /*
     GEL Spacing
     Assumes 16px is set as the default font-size.

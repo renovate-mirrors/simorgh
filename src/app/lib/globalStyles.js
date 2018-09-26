@@ -30,6 +30,13 @@ injectGlobal`
   }
   @font-face {
     font-display: optional;
+    font-family: ReithSansNewsRegularItalic;
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_It.woff2') format('woff2'), url('https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_It.woff') format('woff');
+  }
+  @font-face {
+    font-display: optional;
     font-family: ReithSansNewsMedium;
     font-style: normal;
     font-weight: 600;
@@ -41,6 +48,13 @@ injectGlobal`
     font-style: normal;
     font-weight: 700;
     src: url('https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Bd.woff2') format('woff2'), url('https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_Bd.woff') format('woff');
+  }
+  @font-face {
+    font-display: optional;
+    font-family: ReithSansNewsBoldItalic;
+    font-style: normal;
+    font-weight: 700;
+    src: url('https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_BdIt.woff2') format('woff2'), url('https://gel.files.bbci.co.uk/r2.302/BBCReithSans_W_BdIt.woff') format('woff');
   }
   @font-face {
     font-display: optional;
@@ -62,6 +76,13 @@ injectGlobal`
     font-style: normal;
     font-weight: 600;
     src: url('https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Md.woff2') format('woff2'), url('https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_Md.woff') format('woff');
+  }
+  @font-face {
+    font-display: optional;
+    font-family: ReithSerifNewsMediumItalic;
+    font-style: normal;
+    font-weight: 600;
+    src: url('https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_MdIt.woff2') format('woff2'), url('https://gel.files.bbci.co.uk/r2.302/BBCReithSerif_W_MdIt.woff') format('woff');
   }
   @font-face {
     font-display: optional;
