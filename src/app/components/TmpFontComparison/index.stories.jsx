@@ -21,7 +21,6 @@ import {
 
 const SansReg = styled.span`
   font-family: ${FF_NEWS_SANS_REG};
-  font-weight: 700;
 `;
 
 const SansRegItal = styled.span`
@@ -34,7 +33,7 @@ const SansRegFakeItal = styled.i`
 
 const SansRegWeighted = styled.span`
   font-family: ${FF_NEWS_SANS_REG};
-  font-weight: 700;
+  font-weight: 1000;
 `;
 
 const SansBold = styled.span`
@@ -138,13 +137,11 @@ storiesOf('Text Comparisons', module)
     <DifferSizes>
       <SansBold>
         <QuickBrown />
-      </SansBold>{' '}
-      -- Sans Bold
+      </SansBold>
       <br />
       <SansRegWeighted>
         <QuickBrown />
-      </SansRegWeighted>{' '}
-      -- Sans Regular Weighted
+      </SansRegWeighted>
     </DifferSizes>
   ))
   .add(
@@ -153,13 +150,11 @@ storiesOf('Text Comparisons', module)
       <DifferSizes>
         <SerifMediumItal>
           <QuickBrown />
-        </SerifMediumItal>{' '}
-        -- Serif Medium Italics
+        </SerifMediumItal>
         <br />
         <SerifMediumFakeItal>
           <QuickBrown />
-        </SerifMediumFakeItal>{' '}
-        -- Serif Medium Faux Italics
+        </SerifMediumFakeItal>
       </DifferSizes>
     ),
   )
@@ -169,13 +164,11 @@ storiesOf('Text Comparisons', module)
       <DifferSizes>
         <SansRegItal>
           <QuickBrown />
-        </SansRegItal>{' '}
-        -- Sans Regular Italics
+        </SansRegItal>
         <br />
         <SansRegFakeItal>
           <QuickBrown />
-        </SansRegFakeItal>{' '}
-        -- Sans Regular Faux Italics
+        </SansRegFakeItal>
       </DifferSizes>
     ),
   )
@@ -185,13 +178,11 @@ storiesOf('Text Comparisons', module)
       <DifferSizes>
         <SansBoldItal>
           <QuickBrown />
-        </SansBoldItal>{' '}
-        -- Sans Bold Italics
+        </SansBoldItal>
         <br />
         <SansBoldFakeItal>
           <QuickBrown />
-        </SansBoldFakeItal>{' '}
-        -- Sans Bold Faux Italics
+        </SansBoldFakeItal>
       </DifferSizes>
     ),
   )
@@ -201,18 +192,15 @@ storiesOf('Text Comparisons', module)
       <DifferSizes>
         <SerifMedium>
           <QuickBrown />
-        </SerifMedium>{' '}
-        -- Serif Medium
+        </SerifMedium>
         <br />
         <SansReg>
           <QuickBrown />
-        </SansReg>{' '}
-        -- Sans Regular
+        </SansReg>
         <br />
         <SansBold>
           <QuickBrown />
-        </SansBold>{' '}
-        -- Sans Bold
+        </SansBold>
       </DifferSizes>
     ),
   );
