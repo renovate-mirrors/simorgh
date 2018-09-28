@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
+import { node } from 'prop-types';
 import {
   FF_NEWS_SANS_REG,
   FF_NEWS_SANS_BLD,
@@ -9,6 +10,14 @@ import {
   FF_NEWS_SANS_REG_ITAL,
   FF_NEWS_SANS_BLD_ITAL,
 } from '../../lib/constants/styles';
+import {
+  T_MINION,
+  T_TRAFALGAR,
+  T_BREVIER,
+  T_LONG_PRIMER,
+  T_BODY_COPY,
+  T_CANON,
+} from '../../lib/constants/typography';
 
 const SansReg = styled.span`
   font-family: ${FF_NEWS_SANS_REG};
@@ -52,76 +61,158 @@ const SerifMediumFakeItal = styled.i`
   font-family: ${FF_NEWS_SERIF_MDM};
 `;
 
+const Minion = styled.div`
+  ${T_MINION};
+`;
+
+const Trafalgar = styled.div`
+  ${T_TRAFALGAR};
+`;
+
+const Brevier = styled.div`
+  ${T_BREVIER};
+`;
+
+const BodyCopy = styled.div`
+  ${T_BODY_COPY};
+`;
+
+const Canon = styled.div`
+  ${T_CANON};
+`;
+
+const LongPrimer = styled.div`
+  ${T_LONG_PRIMER};
+`;
+
+const QuickBrown = () => (
+  <Fragment>The quick brown fox jumped over the lazy dog.</Fragment>
+);
+
+const DifferSizes = ({ children }) => (
+  <Fragment>
+    <Minion>
+      Minion
+      <br />
+      {children}
+    </Minion>
+    <br />
+    <Brevier>
+      Brevier
+      <br />
+      {children}
+    </Brevier>
+    <br />
+    <LongPrimer>
+      Long Primer
+      <br />
+      {children}
+    </LongPrimer>
+    <br />
+    <BodyCopy>
+      Body Copy
+      <br />
+      {children}
+    </BodyCopy>
+    <br />
+    <Trafalgar>
+      Trafalgar
+      <br />
+      {children}
+    </Trafalgar>
+    <br />
+    <Canon>
+      Canon
+      <br />
+      {children}
+    </Canon>
+  </Fragment>
+);
+
+DifferSizes.propTypes = {
+  children: node.isRequired,
+};
+
 storiesOf('Text Comparisons', module)
   .add('Compare Reith Sans Bold with Reith Sans Regular weighted', () => (
-    <Fragment>
-      <SansBold>The quick brown fox jumped over the lazy dog.</SansBold> -- Sans
-      Bold
+    <DifferSizes>
+      <SansBold>
+        <QuickBrown />
+      </SansBold>{' '}
+      -- Sans Bold
       <br />
       <SansRegWeighted>
-        The quick brown fox jumped over the lazy dog.
+        <QuickBrown />
       </SansRegWeighted>{' '}
       -- Sans Regular Weighted
-    </Fragment>
+    </DifferSizes>
   ))
   .add(
     'Compare Reith Serif Medium Italics to Reith Serif Medium with italic formatting',
     () => (
-      <Fragment>
+      <DifferSizes>
         <SerifMediumItal>
-          The quick brown fox jumped over the lazy dog.
+          <QuickBrown />
         </SerifMediumItal>{' '}
         -- Serif Medium Italics
         <br />
         <SerifMediumFakeItal>
-          The quick brown fox jumped over the lazy dog.
+          <QuickBrown />
         </SerifMediumFakeItal>{' '}
         -- Serif Medium Faux Italics
-      </Fragment>
+      </DifferSizes>
     ),
   )
   .add(
     'Compare Reith Sans Regular Italics to Reith Sans Regular with italic formatting',
     () => (
-      <Fragment>
-        <SansRegItal>The quick brown fox jumped over the lazy dog.</SansRegItal>{' '}
+      <DifferSizes>
+        <SansRegItal>
+          <QuickBrown />
+        </SansRegItal>{' '}
         -- Sans Regular Italics
         <br />
         <SansRegFakeItal>
-          The quick brown fox jumped over the lazy dog.
+          <QuickBrown />
         </SansRegFakeItal>{' '}
         -- Sans Regular Faux Italics
-      </Fragment>
+      </DifferSizes>
     ),
   )
   .add(
     'Compare Reith Sans Bold Italics to Reith Sans Bold with italic formatting',
     () => (
-      <Fragment>
+      <DifferSizes>
         <SansBoldItal>
-          The quick brown fox jumped over the lazy dog.
+          <QuickBrown />
         </SansBoldItal>{' '}
         -- Sans Bold Italics
         <br />
         <SansBoldFakeItal>
-          The quick brown fox jumped over the lazy dog.
+          <QuickBrown />
         </SansBoldFakeItal>{' '}
         -- Sans Bold Faux Italics
-      </Fragment>
+      </DifferSizes>
     ),
   )
   .add(
     'Show Reith Serif Medium, Reith Sans Regular and Reith Sans Bold next to each other',
     () => (
-      <Fragment>
-        <SerifMedium>The quick brown fox jumped over the lazy dog.</SerifMedium>{' '}
+      <DifferSizes>
+        <SerifMedium>
+          <QuickBrown />
+        </SerifMedium>{' '}
         -- Serif Medium
         <br />
-        <SansReg>The quick brown fox jumped over the lazy dog.</SansReg> -- Sans
-        Regular
+        <SansReg>
+          <QuickBrown />
+        </SansReg>{' '}
+        -- Sans Regular
         <br />
-        <SansBold>The quick brown fox jumped over the lazy dog.</SansBold> --
-        Sans Bold
-      </Fragment>
+        <SansBold>
+          <QuickBrown />
+        </SansBold>{' '}
+        -- Sans Bold
+      </DifferSizes>
     ),
   );
