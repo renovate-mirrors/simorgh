@@ -105,7 +105,7 @@
     "chrome-launcher": "^0.10.5",
     "core-js": "^2.6.0",
     "cypress": "^3.1.1",
-    "eslint": "^5.8.0",
+    "eslint": "5.11.1",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-import": "^2.13.0",
